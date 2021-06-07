@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Widoki/Widoki.iml" filepath="$PROJECT_DIR$/Widoki/Widoki.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/piu21l_kaczorowski.iml" filepath="$PROJECT_DIR$/.idea/piu21l_kaczorowski.iml" />
+    </modules>
+  </component>
+</project>
