@@ -17,6 +17,8 @@ public class News {
 
     private String kategoria;
 
+    private String imgSource;
+
     public News(String nazwa, String tresc, HashSet<String> tagi, Long newsId, Date dataDodania, String kategoria) {
         this.nazwa = nazwa;
         this.tresc = tresc;
@@ -24,6 +26,17 @@ public class News {
         this.newsId = newsId;
         this.dataDodania = dataDodania;
         this.kategoria = kategoria;
+    }
+    public News(){
+
+    }
+
+    public String getImgSource() {
+        return imgSource;
+    }
+
+    public void setImgSource(String imgSource) {
+        this.imgSource = imgSource;
     }
 
     public String getNazwa() {

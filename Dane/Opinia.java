@@ -60,7 +60,7 @@ public class Opinia implements FunkcjeOpinie {
 
     @Override
     public void wyszukajPoKategorii() {
-        
+
     }
 
     @Override
