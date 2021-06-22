@@ -20,16 +20,38 @@ public class NewsController implements Initializable {
 
     private List<News> newsy = new ArrayList<>();
 
+    public LoginController loginController;
+
+    public LoginController getLoginController() {
+        return loginController;
+    }
+
+    public void setLoginController(LoginController loginController) {
+        this.loginController = loginController;
+    }
+
     @FXML
     private GridPane grid;
-
+/*
+    public void backToLog() {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/login.fxml"));
+        AnchorPane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        LoginController loginController = loader.getController();
+        loginController.setLoginController(this);
+    }
+*/
     private List<News> getData(){
         News news;
         for (int i = 0; i < 20; i++){
             news = new News();
             news.setNazwa("Nowe iPhony!");
             news.setTresc("Nowe ajfony są super. Kup je już dziś. Będą lepsze niż zawsze. Cena nie odbiega od poprzednich premier.");
-            news.setImgSource("resources/1-Apple_announce-iphone12pro_10132020.jpg");
+            news.setImgSource("D:\\Users\\kubam\\Documents\\Studia\\Propgramowanie\\Piu\\piu21l_kaczorowski\\ElektroPudelek\\src\\Widoki\\resources\\images.jpg");
             newsy.add(news);
         }
         return newsy;
