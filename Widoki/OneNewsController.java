@@ -29,7 +29,7 @@ public class OneNewsController {
         nazwa.setText(news.getNazwa());
         tresc.setText(news.getTresc());
 
-        InputStream stream = new FileInputStream("resources/images.jpg");
+        InputStream stream = new FileInputStream("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/images.jpg");
         Image image = new Image(stream);
 
        // Image image = new Image(getClass().getResourceAsStream(news.getImgSource()));

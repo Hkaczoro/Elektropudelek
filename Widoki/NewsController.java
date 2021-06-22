@@ -29,7 +29,7 @@ public class NewsController implements Initializable {
             news = new News();
             news.setNazwa("Nowe iPhony!");
             news.setTresc("Nowe ajfony są super. Kup je już dziś. Będą lepsze niż zawsze. Cena nie odbiega od poprzednich premier.");
-            news.setImgSource("resources/1-Apple_announce-iphone12pro_10132020.jpg");
+            news.setImgSource("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/images.jpg");
             newsy.add(news);
         }
         return newsy;
