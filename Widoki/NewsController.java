@@ -51,7 +51,7 @@ public class NewsController implements Initializable {
             news = new News();
             news.setNazwa("Nowe iPhony!");
             news.setTresc("Nowe ajfony są super. Kup je już dziś. Będą lepsze niż zawsze. Cena nie odbiega od poprzednich premier.");
-            news.setImgSource("D:\\Users\\kubam\\Documents\\Studia\\Propgramowanie\\Piu\\piu21l_kaczorowski\\ElektroPudelek\\src\\Widoki\\resources\\images.jpg");
+            news.setImgSource("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/images.jpg");
             newsy.add(news);
         }
         return newsy;
