@@ -79,6 +79,9 @@ public class LoginController implements Initializable, Logowanie {
             zlyLogin.setVisible(false);
             zleHaslo.setVisible(false);
             inneHasla.setVisible(false);
+            loginR.setText("");
+            hasloR.setText("");
+            hasloRR.setText("");
         }
     }
 
