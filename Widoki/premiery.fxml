@@ -39,7 +39,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Widoki.PremieryController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #F9F9F9;" VBox.vgrow="ALWAYS">
          <children>
@@ -50,32 +50,32 @@
                         <Font name="Euphemia UCAS" size="15.0" />
                      </font>
                   </Label>
-                  <Button layoutX="482.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Forum">
+                  <Button fx:id="forumButt" layoutX="482.0" layoutY="20.0" mnemonicParsing="false" onAction="#toForum" style="-fx-background-color: transparent;" text="Forum">
                      <font>
                         <Font name="Euphemia UCAS" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="542.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #63B656;" text="Premiery">
+                  <Button fx:id="premieryButt" layoutX="542.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #63B656;" text="Premiery">
                      <font>
                         <Font name="Euphemia UCAS" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="617.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Opinie">
+                  <Button fx:id="opinieButt" layoutX="617.0" layoutY="20.0" mnemonicParsing="false" onAction="#toOpinie" style="-fx-background-color: transparent;" text="Opinie">
                      <font>
                         <Font name="Euphemia UCAS" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="678.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Memy">
+                  <Button fx:id="memeButt" layoutX="678.0" layoutY="20.0" mnemonicParsing="false" onAction="#toMeme" style="-fx-background-color: transparent;" text="Memy">
                      <font>
                         <Font name="Euphemia UCAS" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="735.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: transparent;" text="Porozmawiaj">
+                  <Button fx:id="porozmawiajButt" layoutX="735.0" layoutY="20.0" mnemonicParsing="false" onAction="#toPorozmawiaj" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: transparent;" text="Porozmawiaj">
                      <font>
                         <Font name="Euphemia UCAS" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="422.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: Transparent;" text="Newsy">
+                  <Button fx:id="newsButt" layoutX="422.0" layoutY="20.0" mnemonicParsing="false" onAction="#toNews" style="-fx-background-color: Transparent;" text="Newsy">
                      <font>
                         <Font name="Euphemia UCAS" size="14.0" />
                      </font>

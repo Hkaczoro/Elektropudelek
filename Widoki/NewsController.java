@@ -54,7 +54,7 @@ public class NewsController implements Initializable {
     private GridPane grid;
 
     @FXML
-    public void toForum() {
+    public void toForum(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
         Pane pane = null;
         try {
@@ -68,7 +68,7 @@ public class NewsController implements Initializable {
     }
 
     @FXML
-    void toMeme() {
+    public void toMeme(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/memy.fxml"));
         Pane pane = null;
         try {
@@ -83,17 +83,44 @@ public class NewsController implements Initializable {
 
     @FXML
     void toOpinie(ActionEvent event) {
-
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/opinie.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        OpinieController opinieController = loader.getController();
+        opinieController.setLoginController(loginController);
+        loginController.setScreen(pane);
     }
 
     @FXML
     void toPorozmawiaj(ActionEvent event) {
-
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/porozmawiaj.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        PorozmawiajController porozmawiajController = loader.getController();
+        porozmawiajController.setLoginController(loginController);
+        loginController.setScreen(pane);
     }
 
     @FXML
     void toPremiery(ActionEvent event) {
-
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premiery.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        PremieryController premieryController = loader.getController();
+        premieryController.setLoginController(loginController);
+        loginController.setScreen(pane);
     }
 
 

@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
-public class ForumController {
+public class PorozmawiajController {
 
     private LoginController loginController;
 
@@ -20,7 +20,7 @@ public class ForumController {
     private Button forumButt;
 
     @FXML
-    private Button premierButt;
+    private Button premieryButt;
 
     @FXML
     private Button opinieButt;
@@ -29,10 +29,21 @@ public class ForumController {
     private Button memeButt;
 
     @FXML
-    private Button porozmawiajButt;
+    private Button newsButt;
 
     @FXML
-    private Button newsButt;
+    void toForum(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        ForumController forumController = loader.getController();
+        forumController.setLoginController(loginController);
+        loginController.setScreen(pane);
+    }
 
     @FXML
     void toMeme(ActionEvent event) {
@@ -49,7 +60,7 @@ public class ForumController {
     }
 
     @FXML
-    public void toNews(ActionEvent event) {
+    void toNews(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/newsy.fxml"));
         Pane pane = null;
         try {
@@ -63,16 +74,16 @@ public class ForumController {
     }
 
     @FXML
-    void toPorozmawiaj(ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/porozmawiaj.fxml"));
+    void toOpinie(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/opinie.fxml"));
         Pane pane = null;
         try {
             pane = loader.load();
         } catch (IOException e){
             e.printStackTrace();
         }
-        PorozmawiajController porozmawiajController = loader.getController();
-        porozmawiajController.setLoginController(loginController);
+        OpinieController opinieController = loader.getController();
+        opinieController.setLoginController(loginController);
         loginController.setScreen(pane);
     }
 
@@ -89,4 +100,5 @@ public class ForumController {
         premieryController.setLoginController(loginController);
         loginController.setScreen(pane);
     }
+
 }

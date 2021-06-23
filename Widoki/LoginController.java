@@ -58,6 +58,7 @@ public class LoginController implements Initializable {
     }
     public void setScreen(Pane pane){
         mainPane.getChildren().clear();
+        mainPane.getStylesheets().clear();
         mainPane.getChildren().add(pane);
     }
 

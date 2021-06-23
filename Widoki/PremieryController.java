@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
-public class ForumController {
+public class PremieryController {
 
     private LoginController loginController;
 
@@ -20,7 +20,7 @@ public class ForumController {
     private Button forumButt;
 
     @FXML
-    private Button premierButt;
+    private Button premieryButt;
 
     @FXML
     private Button opinieButt;
@@ -33,6 +33,20 @@ public class ForumController {
 
     @FXML
     private Button newsButt;
+
+    @FXML
+    void toForum(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        ForumController forumController = loader.getController();
+        forumController.setLoginController(loginController);
+        loginController.setScreen(pane);
+    }
 
     @FXML
     void toMeme(ActionEvent event) {
@@ -49,7 +63,7 @@ public class ForumController {
     }
 
     @FXML
-    public void toNews(ActionEvent event) {
+    void toNews(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/newsy.fxml"));
         Pane pane = null;
         try {
@@ -59,6 +73,20 @@ public class ForumController {
         }
         NewsController newsController = loader.getController();
         newsController.setLoginController(loginController);
+        loginController.setScreen(pane);
+    }
+
+    @FXML
+    void toOpinie(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/opinie.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        OpinieController opinieController = loader.getController();
+        opinieController.setLoginController(loginController);
         loginController.setScreen(pane);
     }
 
@@ -75,9 +103,7 @@ public class ForumController {
         porozmawiajController.setLoginController(loginController);
         loginController.setScreen(pane);
     }
-
-    @FXML
-    void toPremiery(ActionEvent event) {
+    public void doPremiery() {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premiery.fxml"));
         Pane pane = null;
         try {

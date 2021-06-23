@@ -70,13 +70,13 @@
             <PasswordField fx:id="hasloRR" layoutX="84.0" layoutY="287.0" prefHeight="26.0" prefWidth="250.0" promptText="Powtórz hasło" />
             <PasswordField fx:id="hasloL" layoutX="516.0" layoutY="263.0" prefHeight="26.0" prefWidth="250.0" promptText="Hasło" />
 
-            <!--
+                  <!--
             <Icon content="PERSON" layoutX="49.0" layoutY="147.0" style="-fx-opacity: 0.5;" />
-                  <Icon content="SECURITY" layoutX="49.0" layoutY="217.0" style="-fx-opacity: 0.5;" />
-                  <Icon content="SECURITY" layoutX="49.0" layoutY="287.0" style="-fx-opacity: 0.5;" />
-                  <Icon content="PERSON" layoutX="486.0" layoutY="196.0" style="-fx-opacity: 0.5;" />
-                  <Icon content="SECURITY" layoutX="486.0" layoutY="263.0" style="-fx-opacity: 0.5;" />
-                  -->
+                        <Icon content="SECURITY" layoutX="49.0" layoutY="217.0" style="-fx-opacity: 0.5;" />
+                        <Icon content="SECURITY" layoutX="49.0" layoutY="287.0" style="-fx-opacity: 0.5;" />
+                        <Icon content="PERSON" layoutX="486.0" layoutY="196.0" style="-fx-opacity: 0.5;" />
+                        <Icon content="SECURITY" layoutX="486.0" layoutY="263.0" style="-fx-opacity: 0.5;" />
+                        -->
             <Label fx:id="zlyLogin" layoutX="84.0" layoutY="173.0" prefHeight="18.0" prefWidth="250.0" text="Login powinien zawierać 6-12 znaków." textFill="#ce0000">
                <font>
                   <Font name="Euphemia UCAS" size="13.0" />

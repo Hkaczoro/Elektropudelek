@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
-public class ForumController {
+public class OpinieController {
 
     private LoginController loginController;
 
@@ -20,10 +20,7 @@ public class ForumController {
     private Button forumButt;
 
     @FXML
-    private Button premierButt;
-
-    @FXML
-    private Button opinieButt;
+    private Button premieryButt;
 
     @FXML
     private Button memeButt;
@@ -33,6 +30,20 @@ public class ForumController {
 
     @FXML
     private Button newsButt;
+
+    @FXML
+    void toForum(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        ForumController forumController = loader.getController();
+        forumController.setLoginController(loginController);
+        loginController.setScreen(pane);
+    }
 
     @FXML
     void toMeme(ActionEvent event) {
@@ -49,7 +60,7 @@ public class ForumController {
     }
 
     @FXML
-    public void toNews(ActionEvent event) {
+    void toNews(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/newsy.fxml"));
         Pane pane = null;
         try {
@@ -89,4 +100,6 @@ public class ForumController {
         premieryController.setLoginController(loginController);
         loginController.setScreen(pane);
     }
+
+
 }
