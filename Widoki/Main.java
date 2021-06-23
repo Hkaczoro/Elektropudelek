@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Widoki/newsy.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Widoki/login.fxml"));
         primaryStage.setTitle("ElektroPudelek");
         primaryStage.setScene(new Scene(root, 850, 550));
 

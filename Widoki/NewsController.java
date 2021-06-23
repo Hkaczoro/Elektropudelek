@@ -1,14 +1,13 @@
 package Widoki;
 
 import Dane.News;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.Button;
+import javafx.scene.layout.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -20,8 +19,83 @@ public class NewsController implements Initializable {
 
     private List<News> newsy = new ArrayList<>();
 
+    private LoginController loginController;
+
+    public void setLoginController(LoginController loginController) {
+        this.loginController = loginController;
+    }
+
+
+
+    @FXML
+    private Button forumButt;
+
+    @FXML
+    private AnchorPane mainPane;
+    @FXML
+    private Button premierButt;
+
+    @FXML
+    private Button opinieButt;
+
+    @FXML
+    private Button memeButt;
+
+    @FXML
+    private Button porozmawiajButt;
+
+    @FXML
+    private Button newsybutt;
+
+    @FXML
+    private Button logoutButt;
+
     @FXML
     private GridPane grid;
+
+    @FXML
+    public void toForum() {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        ForumController forumController = loader.getController();
+        forumController.setLoginController(loginController);
+        loginController.setScreen(pane);
+    }
+
+    @FXML
+    void toMeme() {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/memy.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        MemyController memyController = loader.getController();
+        memyController.setLoginController(loginController);
+        loginController.setScreen(pane);
+    }
+
+    @FXML
+    void toOpinie(ActionEvent event) {
+
+    }
+
+    @FXML
+    void toPorozmawiaj(ActionEvent event) {
+
+    }
+
+    @FXML
+    void toPremiery(ActionEvent event) {
+
+    }
+
 
     private List<News> getData(){
         News news;
@@ -29,7 +103,7 @@ public class NewsController implements Initializable {
             news = new News();
             news.setNazwa("Nowe iPhony!");
             news.setTresc("Nowe ajfony są super. Kup je już dziś. Będą lepsze niż zawsze. Cena nie odbiega od poprzednich premier.");
-            news.setImgSource("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/images.jpg");
+            news.setImgSource("D:\\Users\\kubam\\Documents\\Studia\\Propgramowanie\\Piu\\piu21l_kaczorowski\\ElektroPudelek\\src\\Widoki\\resources\\images.jpg");
             newsy.add(news);
         }
         return newsy;
