@@ -73,6 +73,10 @@ public class PostNaForum implements FukcjeForum {
         this.kategoria = kategoria;
     }
 
+    public PostNaForum(){
+        
+    }
+
     public Long getPostId() {
         return postId;
     }
