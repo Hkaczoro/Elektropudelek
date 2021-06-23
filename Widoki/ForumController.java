@@ -82,7 +82,7 @@ public class ForumController implements Initializable{
         int row = 1;
 
         try {
-            for (int i = 0; i < newsy.size(); i++){
+            for (int i = 0; i < posty.size(); i++){
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/Widoki/onePost.fxml"));
                 VBox vBox = loader.load();
