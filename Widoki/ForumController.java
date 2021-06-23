@@ -12,6 +12,8 @@ public class ForumController {
 
     private LoginController loginController;
 
+    private List<PostNaForum> posty = new ArrayList<>();
+
     public void setLoginController(LoginController loginController) {
         this.loginController = loginController;
     }
@@ -33,6 +35,9 @@ public class ForumController {
 
     @FXML
     private Button newsButt;
+
+    @FXML
+    private GridPane grid;
 
     @FXML
     void toMeme(ActionEvent event) {
