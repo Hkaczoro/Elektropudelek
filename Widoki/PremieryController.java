@@ -1,14 +1,20 @@
 package Widoki;
 
+import Dane.Uzytkownik;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class PremieryController {
+public class PremieryController /*implements Initializable*/ {
 
     private LoginController loginController;
 
@@ -18,6 +24,13 @@ public class PremieryController {
 
     @FXML
     private Button forumButt;
+
+    @FXML
+    private Label loginLab;
+
+    public void setLoginLab(String text) {
+        loginLab.setText(text);
+    }
 
     @FXML
     private Button premieryButt;
@@ -33,7 +46,19 @@ public class PremieryController {
 
     @FXML
     private Button newsButt;
+/*
+    @FXML
+    private AnchorPane czerwiecPane;
 
+    @FXML
+    private AnchorPane lipiecPanel;
+
+    @FXML
+    private Button backButt;
+
+    @FXML
+    private Button frontButt;
+*/
     @FXML
     void toForum(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
@@ -46,6 +71,7 @@ public class PremieryController {
         ForumController forumController = loader.getController();
         forumController.setLoginController(loginController);
         loginController.setScreen(pane);
+        forumController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -60,6 +86,7 @@ public class PremieryController {
         MemyController memyController = loader.getController();
         memyController.setLoginController(loginController);
         loginController.setScreen(pane);
+        memyController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -74,6 +101,7 @@ public class PremieryController {
         NewsController newsController = loader.getController();
         newsController.setLoginController(loginController);
         loginController.setScreen(pane);
+        newsController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -88,6 +116,7 @@ public class PremieryController {
         OpinieController opinieController = loader.getController();
         opinieController.setLoginController(loginController);
         loginController.setScreen(pane);
+        opinieController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -102,17 +131,21 @@ public class PremieryController {
         PorozmawiajController porozmawiajController = loader.getController();
         porozmawiajController.setLoginController(loginController);
         loginController.setScreen(pane);
+        porozmawiajController.setLoginLab(LoginController.userLogin);
     }
-    public void doPremiery() {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premiery.fxml"));
-        Pane pane = null;
-        try {
-            pane = loader.load();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-        PremieryController premieryController = loader.getController();
-        premieryController.setLoginController(loginController);
-        loginController.setScreen(pane);
+
+    /*@Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        lipiecPanel.setVisible(false);
+    }
+    @FXML
+    void toCzerwiec(){
+        czerwiecPane.setVisible(true);
+        lipiecPanel.setVisible(false);
+    }*/
+    @FXML
+    void toLipiec(){
+        //czerwiecPane.setVisible(false);
+        //lipiecPanel.setVisible(true);
     }
 }

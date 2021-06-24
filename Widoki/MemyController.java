@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -39,6 +40,13 @@ public class MemyController {
     private Pagination pg;
 
     @FXML
+    private Label loginLab;
+
+    public void setLoginLab(String text) {
+        loginLab.setText(text);
+    }
+
+    @FXML
     void toForum(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
         Pane pane = null;
@@ -50,6 +58,7 @@ public class MemyController {
         ForumController forumController = loader.getController();
         forumController.setLoginController(loginController);
         loginController.setScreen(pane);
+        forumController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -64,6 +73,7 @@ public class MemyController {
         NewsController newsController = loader.getController();
         newsController.setLoginController(loginController);
         loginController.setScreen(pane);
+        newsController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -78,6 +88,7 @@ public class MemyController {
         OpinieController opinieController = loader.getController();
         opinieController.setLoginController(loginController);
         loginController.setScreen(pane);
+        opinieController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -92,6 +103,7 @@ public class MemyController {
         PorozmawiajController porozmawiajController = loader.getController();
         porozmawiajController.setLoginController(loginController);
         loginController.setScreen(pane);
+        porozmawiajController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -106,6 +118,7 @@ public class MemyController {
         PremieryController premieryController = loader.getController();
         premieryController.setLoginController(loginController);
         loginController.setScreen(pane);
+        premieryController.setLoginLab(LoginController.userLogin);
     }
 
     public void setLoginController(LoginController loginController) {

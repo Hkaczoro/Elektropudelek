@@ -40,7 +40,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #F9F9F9;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Widoki.PorozmawiajController">
    <children>
       <AnchorPane prefHeight="70.0" prefWidth="851.0" style="-fx-background-color: #83AAB0;">
@@ -80,7 +79,7 @@
                   <Font name="Euphemia UCAS" size="14.0" />
                </font>
             </Button>
-            <Label layoutX="142.0" layoutY="11.0" prefHeight="24.0" prefWidth="135.0" text="USER">
+            <Label fx:id="loginLab" layoutX="142.0" layoutY="11.0" prefHeight="24.0" prefWidth="135.0" text="USER">
                <font>
                   <Font name="Euphemia UCAS" size="16.0" />
                </font>
@@ -99,8 +98,8 @@
                   <Font name="Menlo Regular" size="34.0" />
                </font>
             </Label>
-            <DatePicker layoutX="204.0" layoutY="93.0" prefHeight="30.0" prefWidth="287.0" />
-            <SplitMenuButton layoutX="204.0" layoutY="179.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="287.0" text="SplitMenuButton">
+            <DatePicker fx:id="datePicker" layoutX="204.0" layoutY="93.0" prefHeight="30.0" prefWidth="287.0" />
+            <SplitMenuButton fx:id="listaMenuButt" layoutX="204.0" layoutY="179.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="287.0" text="Dostępne tematy">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
                 <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -111,7 +110,7 @@
                   <Font name="Euphemia UCAS" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="264.0" layoutY="146.0" text="Wybierz rodzaj">
+            <Label layoutX="264.0" layoutY="146.0" text="Wybierz temat">
                <font>
                   <Font name="Euphemia UCAS" size="24.0" />
                </font>
@@ -126,17 +125,17 @@
                   <Font name="Euphemia UCAS" size="30.0" />
                </font>
             </Button>
-            <Label layoutX="231.0" layoutY="214.0" text="Wybrany termin jest zajęty." textFill="RED">
+            <Label fx:id="zajeteLab" layoutX="231.0" layoutY="214.0" text="Wybrany termin jest zajęty." textFill="RED">
                <font>
                   <Font name="Euphemia UCAS" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="258.0" layoutY="240.0" text="Dokonano rezerwacji." textFill="RED">
+            <Label fx:id="rezerwLab" layoutX="258.0" layoutY="240.0" text="Dokonano rezerwacji." textFill="RED">
                <font>
                   <Font name="Euphemia UCAS" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="251.0" layoutY="266.0" mnemonicParsing="false" style="-fx-background-color: gray; -fx-text-fill: white;" text="Rezerwuj termin">
+            <Button fx:id="rezerwButt" layoutX="251.0" layoutY="266.0" mnemonicParsing="false" onAction="#rezerwuj" style="-fx-background-color: gray; -fx-text-fill: white;" text="Rezerwuj termin">
                <font>
                   <Font name="Euphemia UCAS" size="22.0" />
                </font>

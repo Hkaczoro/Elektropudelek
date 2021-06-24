@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
@@ -51,6 +52,13 @@ public class ForumController implements Initializable {
     private GridPane grid;
 
     @FXML
+    private Label loginLab;
+
+    public void setLoginLab(String text) {
+        loginLab.setText(text);
+    }
+
+    @FXML
     void toMeme(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/memy.fxml"));
         Pane pane = null;
@@ -62,6 +70,7 @@ public class ForumController implements Initializable {
         MemyController memyController = loader.getController();
         memyController.setLoginController(loginController);
         loginController.setScreen(pane);
+        memyController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -76,8 +85,39 @@ public class ForumController implements Initializable {
         NewsController newsController = loader.getController();
         newsController.setLoginController(loginController);
         loginController.setScreen(pane);
+        newsController.setLoginLab(LoginController.userLogin);
     }
 
+    @FXML
+    void toPorozmawiaj(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/porozmawiaj.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        PorozmawiajController porozmawiajController = loader.getController();
+        porozmawiajController.setLoginController(loginController);
+        loginController.setScreen(pane);
+        porozmawiajController.setLoginLab(LoginController.userLogin);
+
+    }
+
+    @FXML
+    void toPremiery(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premiery.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        PremieryController premieryController = loader.getController();
+        premieryController.setLoginController(loginController);
+        loginController.setScreen(pane);
+        premieryController.setLoginLab(LoginController.userLogin);
+    }
 
     private List<PostNaForum> getData(){
         for (int i = 0; i < 10; i++){
@@ -132,33 +172,7 @@ public class ForumController implements Initializable {
     }
 
 
-    @FXML
-    void toPorozmawiaj(ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/porozmawiaj.fxml"));
-        Pane pane = null;
-        try {
-            pane = loader.load();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-        PorozmawiajController porozmawiajController = loader.getController();
-        porozmawiajController.setLoginController(loginController);
-        loginController.setScreen(pane);
-    }
 
-    @FXML
-    void toPremiery(ActionEvent event) {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premiery.fxml"));
-        Pane pane = null;
-        try {
-            pane = loader.load();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-        PremieryController premieryController = loader.getController();
-        premieryController.setLoginController(loginController);
-        loginController.setScreen(pane);
-    }
 
 }
 

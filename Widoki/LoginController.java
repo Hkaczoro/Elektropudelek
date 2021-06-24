@@ -46,8 +46,10 @@ public class LoginController implements Initializable {
 
     @FXML
     private Label bledneDane;
+
     Uzytkownik user = new Uzytkownik("XD","user","pass");
 
+    public static String userLogin;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -102,7 +104,8 @@ public class LoginController implements Initializable {
             NewsController newsController = loader.getController();
             newsController.setLoginController(this);
             setScreen(pane);
-
+            userLogin = user.getLogin();
+            newsController.setLoginLab(userLogin);
         }
     }
 

@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 
 import java.io.IOException;
@@ -54,6 +55,13 @@ public class NewsController implements Initializable {
     private GridPane grid;
 
     @FXML
+    private Label loginLab;
+
+    public void setLoginLab(String text) {
+        loginLab.setText(text);
+    }
+
+    @FXML
     public void toForum(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
         Pane pane = null;
@@ -65,6 +73,7 @@ public class NewsController implements Initializable {
         ForumController forumController = loader.getController();
         forumController.setLoginController(loginController);
         loginController.setScreen(pane);
+        forumController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -79,6 +88,7 @@ public class NewsController implements Initializable {
         MemyController memyController = loader.getController();
         memyController.setLoginController(loginController);
         loginController.setScreen(pane);
+        memyController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -93,6 +103,7 @@ public class NewsController implements Initializable {
         OpinieController opinieController = loader.getController();
         opinieController.setLoginController(loginController);
         loginController.setScreen(pane);
+        opinieController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -107,6 +118,7 @@ public class NewsController implements Initializable {
         PorozmawiajController porozmawiajController = loader.getController();
         porozmawiajController.setLoginController(loginController);
         loginController.setScreen(pane);
+        porozmawiajController.setLoginLab(LoginController.userLogin);
     }
 
     @FXML
@@ -121,6 +133,7 @@ public class NewsController implements Initializable {
         PremieryController premieryController = loader.getController();
         premieryController.setLoginController(loginController);
         loginController.setScreen(pane);
+        premieryController.setLoginLab(LoginController.userLogin);
     }
 
 
