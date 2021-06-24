@@ -47,7 +47,7 @@ public class MemyController implements Initializable {
     private Button newsButt;
 
     @FXML
-    private Pagination pg;
+    private ImageView iv;
 
     @FXML
     private Label loginLab;
@@ -160,6 +160,19 @@ public class MemyController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        iv = new ImageView();
+        InputStream stream;
+        try {
+            stream = new FileInputStream("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/m1.jpg");
+            Image image = new Image(stream);
+            iv.setImage(image);
+            iv.setSmooth(true);
+            iv.setCache(true);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
 
     }
 }
