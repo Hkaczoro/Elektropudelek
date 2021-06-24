@@ -13,8 +13,7 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-public class PremieryController /*implements Initializable*/ {
+public class PremieryLipiecController {
 
     private LoginController loginController;
 
@@ -46,19 +45,7 @@ public class PremieryController /*implements Initializable*/ {
 
     @FXML
     private Button newsButt;
-/*
-    @FXML
-    private AnchorPane czerwiecPane;
 
-    @FXML
-    private AnchorPane lipiecPanel;
-
-    @FXML
-    private Button backButt;
-
-    @FXML
-    private Button frontButt;
-*/
     @FXML
     void toForum(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/forum.fxml"));
@@ -134,27 +121,18 @@ public class PremieryController /*implements Initializable*/ {
         porozmawiajController.setLoginLab(LoginController.userLogin);
     }
 
-    /*@Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        lipiecPanel.setVisible(false);
-    }
     @FXML
     void toCzerwiec(){
-        czerwiecPane.setVisible(true);
-        lipiecPanel.setVisible(false);
-    }*/
-    @FXML
-    void toLipiec(){
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premieryLipiec.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/Widoki/premiery.fxml"));
         Pane pane = null;
         try {
             pane = loader.load();
         } catch (IOException e){
             e.printStackTrace();
         }
-        PremieryLipiecController premieryLipiecController = loader.getController();
-        premieryLipiecController.setLoginController(loginController);
+        PremieryController premieryController = loader.getController();
+        premieryController.setLoginController(loginController);
         loginController.setScreen(pane);
-        premieryLipiecController.setLoginLab(LoginController.userLogin);
+        premieryController.setLoginLab(LoginController.userLogin);
     }
 }
