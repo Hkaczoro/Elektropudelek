@@ -142,6 +142,7 @@ public class PorozmawiajController implements Initializable {
         localDate = LocalDate.now().plusDays(4);
         if(datePicker.getValue().isBefore(localDate)){
             zajeteLab.setVisible(true);
+            rezerwLab.setVisible(false);
         }
         else {
             zajeteLab.setVisible(false);
