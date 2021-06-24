@@ -40,7 +40,7 @@
 
 <VBox prefHeight="130.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Widoki.OnePostController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="624.0" style="-fx-border-color: gray; -fx-border-width: 1px 1px 1px 1px;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="634.0" style="-fx-border-color: gray; -fx-border-width: 1px 1px 1px 1px;" VBox.vgrow="ALWAYS">
          <children>
             <Label fx:id="tytul" layoutX="14.0" layoutY="7.0" prefHeight="26.0" prefWidth="604.0" text="Tytul">
                <font>

@@ -2,6 +2,8 @@ package Dane;
 
 import Funkcje.FunkcjeOpinie;
 
+import javax.print.DocFlavor;
+
 public class Opinia implements FunkcjeOpinie {
 
     private Long opiniaId;
@@ -12,14 +14,28 @@ public class Opinia implements FunkcjeOpinie {
 
     private Elektronika elektronika;
 
-    private Ekspert ekspert;
+    private String ekspert;
 
-    public Opinia(Long opiniaId, String tresc, String tytul, Elektronika elektronika, Ekspert ekspert) {
+    private String elektro;
+
+    public Opinia(Long opiniaId, String tresc, String tytul, Elektronika elektronika, String ekspert) {
         this.opiniaId = opiniaId;
         this.tresc = tresc;
         this.tytul = tytul;
         this.elektronika = elektronika;
         this.ekspert = ekspert;
+    }
+
+    public Opinia(){
+
+    }
+
+    public String getElektro() {
+        return elektro;
+    }
+
+    public void setElektro(String elektro) {
+        this.elektro = elektro;
     }
 
     public Long getOpiniaId() {
@@ -50,11 +66,11 @@ public class Opinia implements FunkcjeOpinie {
         this.elektronika = elektronika;
     }
 
-    public Ekspert getEkspert() {
+    public String getEkspert() {
         return ekspert;
     }
 
-    public void setEkspert(Ekspert ekspert) {
+    public void setEkspert(String ekspert) {
         this.ekspert = ekspert;
     }
 

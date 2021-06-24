@@ -120,7 +120,7 @@ public class ForumController implements Initializable {
     }
 
     private List<PostNaForum> getData(){
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 20; i++){
             PostNaForum post = new PostNaForum();
             post.setNazwa("Co wybrać?");
             post.setTresc("Zadajesz sobie pytanie, jaki telefon wybrać? Chcesz mieć dobry smartfon to dobrze trafiłeś. Ogrom urządzeń pojawiających się w sprzedaży może powodować spory ból głowy. W tej strefie znajdziesz poradniki, w których przygotowujemy zestawienia telefonów z wybranego przedziału cenowego, aby każdy znalazł coś na własną kieszeń, lub dedykowane do określonych zastosowań. Doradzamy w kwestii specyfikacji, ze szczególnym uwzględnieniem takich kwestii jak jakość ekranu, wydajność lub wydajność 3D, czas pracy na baterii, wyposażenie w złącza i jakoś wykonania. Podpowiadamy, jaki system operacyjny będzie najlepszym wyborem dla konkretnego użytkownika, jaki smartfon będzie najlepszy do gier, jaki do filmów, a jaki do firmy. Omawiamy też najważniejsze trendy panujące na rynku mobilnym.");
@@ -160,7 +160,7 @@ public class ForumController implements Initializable {
                 grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 grid.setMaxHeight(Region.USE_PREF_SIZE);
 
-                GridPane.setMargin(vBox, new Insets(10));
+                GridPane.setMargin(vBox, new Insets(20));
 
                 row++;
             }

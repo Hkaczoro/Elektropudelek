@@ -6,8 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -123,5 +126,10 @@ public class MemyController {
 
     public void setLoginController(LoginController loginController) {
         this.loginController = loginController;
+    }
+
+    public VBox createPgae(int index){
+        
+        ImageView imageView = new ImageView();
     }
 }

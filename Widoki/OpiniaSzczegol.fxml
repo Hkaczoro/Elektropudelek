@@ -37,7 +37,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="199.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="199.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Widoki.OpiniaSzczegolController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="129.0" prefWidth="672.0" style="-fx-border-color: gray; -fx-border-width: 1px 1px 1px 1px;" VBox.vgrow="ALWAYS">
          <children>
