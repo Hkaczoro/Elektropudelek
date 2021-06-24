@@ -135,7 +135,7 @@ public class OpinieController implements Initializable {
         for (int i = 0; i < 20; i++){
             opinia = new Opinia();
             opinia.setElektro("Samsung QuickDrive ");
-            opinia.setTresc("Bęben Swirl+ o specjalnej perforacji ma aż 9 kg wsadu i obraca się maksymalnie 1600 razy na minutę. Klasa energetyczna to A, a realne zużycie prądu jest wyjątkowo niskie i wynosi 49 kWh na 100 cykli programu ECO. Niewysokie jest również zużycie wody – 50 litry na cykl to skromna ilość, jak na tak pojemną pralkę. Cieszy standardowy wymiar urządzenia – 60 cm głębokości i tyle samo szerokości.");
+            opinia.setTresc("Bęben Swirl+ o specjalnej perforacji ma aż 9 kg wsadu i obraca się maksymalnie 1600 razy na minutę. Klasa energetyczna to A, a realne zużycie prądu jest wyjątkowo niskie i wynosi 49 kWh na 100 cykli programu ECO. Niewysokie jest również zużycie wody – 50 litry na cykl to skromna ilość, jak na tak pojemną pralkę.");
             opinia.setEkspert("Henryk Wąs");
             opinie.add(opinia);
         }

@@ -3,6 +3,8 @@ package Widoki;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
@@ -12,9 +14,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MemyController {
+public class MemyController implements Initializable {
 
     private LoginController loginController;
 
@@ -128,8 +135,31 @@ public class MemyController {
         this.loginController = loginController;
     }
 
-    public VBox createPgae(int index){
-        
+
+    public VBox createPage(int index) throws FileNotFoundException {
+
         ImageView imageView = new ImageView();
+        InputStream stream;
+
+        if (index==1){
+            stream = new FileInputStream("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/m1.jpg");
+        }
+        else{
+            stream = new FileInputStream("/Users/hubertkaczorowski/Desktop/gegagnhwrt/ElektroPudelek/src/Widoki/resources/m2.jpg");
+        }
+
+        Image image = new Image(stream);
+        imageView.setImage(image);
+        imageView.setSmooth(true);
+        imageView.setCache(true);
+
+        VBox pageBox = new VBox();
+        pageBox.getChildren().add(imageView);
+        return pageBox;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

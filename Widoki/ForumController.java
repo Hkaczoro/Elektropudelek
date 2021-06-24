@@ -160,7 +160,7 @@ public class ForumController implements Initializable {
                 grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 grid.setMaxHeight(Region.USE_PREF_SIZE);
 
-                GridPane.setMargin(vBox, new Insets(20));
+                GridPane.setMargin(vBox, new Insets(10));
 
                 row++;
             }
